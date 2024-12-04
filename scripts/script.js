@@ -132,7 +132,7 @@ function validateddate(_date) {
   const joursParMois = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31];
 
   // On fait une vérification des années bissextiles pour février
-  if (mois === 2 && ((annee % 4 === 0 && annee % 100 !== 0) || (annee % 400 === 0))) {
+  if ((annee % 4 === 0 && annee % 100 !== 0) || (annee % 400 === 0)) {
     joursParMois[1] = 29; // Février a 29 jours
   }
 
