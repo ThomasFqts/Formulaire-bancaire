@@ -8,13 +8,14 @@ h1 {
     width: 100%;
     display: flex;
     justify-content: center;
-    background-color: rgb(128,128,128, .8);
+    background-color: rgb(128, 128, 128, .8);
     border: solid 1px black;
     border-top: none;
+    color: green;
 }
 
 form {
-    background-color: rgb(128,128,128, .8);
+    background-color: rgb(128, 128, 128, .8);
 }
 
 .grille {
@@ -22,23 +23,47 @@ form {
     flex-direction: row;
 }
 
-.Colonne1, .Colonne2, .Colonne3 {
+.Colonne1,
+.Colonne2,
+.Colonne3 {
     display: flex;
     flex-direction: column;
-    width: 30%;
+    width: 50%;
 }
 
 article {
     margin-top: 2.5%;
     margin-bottom: 5%;
-    /* border: solid 1px rgb(0,0,0, .8); */
 }
 
-.Ligne6, .CLigne1, .CLigne2, .CLigne3, .CLigne4, .CLigne5, .CLigne6 {
+button {
+    background-color: green;
+}
+
+.Ligne6,
+.CLigne1,
+.CLigne2,
+.CLigne3,
+.CLigne4,
+.CLigne5,
+.CLigne6 {
     display: flex;
     justify-content: center;
 }
 
-p {
+#OLigne1,
+#OLigne2,
+#OLigne3,
+#OLigne4,
+#OLigne5 {
+    display: flex;
+}
+
+.champs {
+    display: flex;
     color: red;
+}
+
+.modal-btn {
+    color: blue;
 }
