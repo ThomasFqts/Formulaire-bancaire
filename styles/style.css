@@ -1,0 +1,44 @@
+body {
+    background-image: url('img/fond.png');
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+
+h1 {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    background-color: rgb(128,128,128, .8);
+    border: solid 1px black;
+    border-top: none;
+}
+
+form {
+    background-color: rgb(128,128,128, .8);
+}
+
+.grille {
+    display: flex;
+    flex-direction: row;
+}
+
+.Colonne1, .Colonne2, .Colonne3 {
+    display: flex;
+    flex-direction: column;
+    width: 30%;
+}
+
+article {
+    margin-top: 2.5%;
+    margin-bottom: 5%;
+    /* border: solid 1px rgb(0,0,0, .8); */
+}
+
+.Ligne6, .CLigne1, .CLigne2, .CLigne3, .CLigne4, .CLigne5, .CLigne6 {
+    display: flex;
+    justify-content: center;
+}
+
+p {
+    color: red;
+}
