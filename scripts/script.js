@@ -135,7 +135,7 @@ function validateddate(_date) {
   }
   
   // Remplace les séparateurs différents par des '/'
-  _date = _date.replace(/[-. ]/g, "/");
+  _date = _date.replace(/[-., ]/g, "/");
 
   // Expression regulière qui permet de tester la validité du format de la date
   let date_valide = /^([0-2][0-9]|[3][0-1])\/([0][1-9]|[1][0-2])\/([1][9][0-9]{2}|[2][0-9]{3})$/;
