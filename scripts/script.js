@@ -79,8 +79,15 @@ function capitalizeFirstLetter(val) {
 
 // Fonction qui verifie la validité du nom de famille et qui retourne tout le nom en majuscule
 function verifname(_nom) {
+  // On ajoute un message d'erreur si le champs est vide
+  if (_nom.trim() === "" && _nom.length == 0) {
+    onom.innerHTML = `<p class="champs">*Champ nom obligatoire</p>`;
+    return false
+  }
+
+
   // Si le nom est trop court, on affiche un message d'erreur
-  if (_nom.length < 3) {
+  else if (_nom.length < 3) {
     onom.innerHTML = `<p class="champs">Le nom doit contenir au moins 3 caractères.</p>`;
     return false
   } else {
@@ -93,6 +100,13 @@ function verifname(_nom) {
 
 // Fonction qui verifie la validité du prénom et renvoie le prénom avec le premier caractère en majuscule
 function veriffirstname(_prenom) {
+  // On ajoute un message d'erreur si le champs est vide
+  if (_prenom.trim() === "" && _prenom.length == 0) {
+    oprenom.innerHTML = `<p class="champs">*Champ prenom obligatoire</p>`;
+    return false
+  }
+
+
   // Si le prénom est trop court, on affiche un message d'erreur
   if (_prenom.length < 3) {
     oprenom.innerHTML = `<p class="champs">Le prenom doit contenir au moins 3 caractères.</p>`;
@@ -107,6 +121,13 @@ function veriffirstname(_prenom) {
 
 // Fonction qui verifie la validité du format de la date de naissance
 function validateddate(_date) {
+  // On ajoute un message d'erreur si le champs est vide
+  if (_date.trim() === "" && _date.length == 0) {
+    odate.innerHTML = `<p class="champs">*Champ date obligatoire</p>`;
+    return false
+  }
+
+
   // Vérifie si la date est sous le format compact (sans séparateurs)
   if (/^\d{8}$/.test(_date)) {
     // Si la date est sous forme de 12022000, on ajoute les séparateurs '/'
@@ -149,11 +170,16 @@ function validateddate(_date) {
 }
 
 // Fonction qui verifie la validité de l'email
-function verifemail(mail) {
-  let e = mail;
+function verifemail(_email) {
+  // On ajoute un message d'erreur si le champs est vide
+  if (_email.trim() === "" && _email.length == 0) {
+    oemail.innerHTML = `<p class="champs">*Champ email obligatoire</p>`;
+    return false
+  }
+
   // Expression régulière pour vérifier le format de l'email
   let email = /^[a-z0-9]*\.?[a-z0-9]*?[@][a-z]*\.[a-z]*/;
-  if (email.test(e) == true) {
+  if (email.test(_email) == true) {
     oemail.innerText = ""; // Efface les messages d'erreur
     return true;
   } else {
@@ -164,6 +190,13 @@ function verifemail(mail) {
 
 // Fonction qui verifie la validité du code confidentiel
 function verifconfidentialcode(_code) {
+  // On ajoute un message d'erreur si le champs est vide
+  if (_code.trim() === "" && _code.length == 0) {
+    ocode.innerHTML = `<p class="champs">*Champ code confidentiel obligatoire</p>`;
+    return false
+  }
+
+
   // Expression régulière pour vérifier la validité du format du code
   let code_valide = /^[F][R][0-9]{5}([A-Z]|[-]|[.]|[_]){3}[x]$/;
 
